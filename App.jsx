@@ -15,7 +15,7 @@ const firebaseConfig = {
   projectId: "acc-note-app-2641b",
   storageBucket: "acc-note-app-2641b.appspot.com",
   messagingSenderId: "894014087987",
-  appId: "1:894014087987:web:a483f2bf0b112157441446"
+  appId: "1:894014087987:web:a483f2bf0b112157441446",
 };
 
 // Initialize Firebase
@@ -23,11 +23,11 @@ const app = initializeApp(firebaseConfig);
 
 const AppTheme = {
   ...DefaultTheme,
-  colors:{
+  colors: {
     ...DefaultTheme.colors,
-    background: '#fff',
+    background: "#fff",
   },
-}
+};
 
 const Stack = createNativeStackNavigator();
 
@@ -44,7 +44,11 @@ export default function App() {
           </>
         ) : (
           <>
-            <Stack.Screen name="Signin" component={Signin} options={{ headerShown: false }} />
+            <Stack.Screen
+              name="Signin"
+              component={Signin}
+              options={{ headerShown: false }}
+            />
             <Stack.Screen name="Signup" component={Signup} />
           </>
         )}
@@ -52,4 +56,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
