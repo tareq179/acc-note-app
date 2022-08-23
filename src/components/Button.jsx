@@ -1,15 +1,13 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-const Button = ({ title, onPress, customStyles }) => {
+export default function Button({ title, onPress, customStyles }) {
   return (
     <TouchableOpacity style={[styles.button, customStyles]} onPress={onPress}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
-};
-
-export default Button;
+}
 
 const styles = StyleSheet.create({
   button: {
@@ -22,6 +20,5 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
-    fontWeight: "bold",
   },
 });
